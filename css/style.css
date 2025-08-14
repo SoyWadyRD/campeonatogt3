@@ -1,9 +1,138 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #1e1e1e;
   color: #fff;
 }
+
+
+
+
+
+
+/* Base menú */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f0c000;
+  padding: 10px 15px;
+}
+
+/* Menú móvil off-canvas */
+#menu .menu-container {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#menu.active .menu-container {
+  left: 0;
+}
+
+#menu .menu-container a {
+  color: #f0c000;
+  text-decoration: none;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+
+#menu .menu-container a:hover {
+  color: #fff;
+}
+
+/* Overlay semitransparente */
+/* Overlay semitransparente */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none; /* No interactúa cuando está cerrado */
+  transition: opacity 0.3s;
+  z-index: 900;
+}
+
+#menu.active .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menú horizontal PC */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #menu .menu-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    flex-direction: row;
+    width: 100%;
+    height: 0px;            /* altura deseada */
+    background: black;
+    position: relative;
+    top: 0;
+    left: 0;                 /* ya no afecta el centrado de flex */
+  }
+
+  #menu .menu-container a {
+    color: #f0c000;          /* ejemplo de color de texto */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 header {
   text-align: center;

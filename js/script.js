@@ -41,3 +41,43 @@ cerrar.addEventListener("click", () => {
 lightbox.addEventListener("click", (e) => {
   if(e.target !== lightboxImg) lightbox.style.display = "none";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const menu = document.getElementById('menu');
+const toggle = document.querySelector('.menu-toggle');
+const overlay = document.querySelector('.overlay');
+const links = document.querySelectorAll('#menu .menu-container a');
+
+// Abrir/cerrar menú
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+// Cerrar al tocar overlay
+overlay.addEventListener('click', () => {
+  menu.classList.remove('active');
+});
+
+// Cerrar al tocar un link
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+});
