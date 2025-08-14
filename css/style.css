@@ -422,10 +422,10 @@ footer {
 /* Colores de equipos aplicados a td dentro de tr */
 .team-red td { background-color: #ff1b1b; color: #fff; }
 .team-blue td { background-color: #1f48ff; color: #fff; }
-.team-green td { background-color: #4CFF4C; color: #000; }
+.team-green td { background-color: #1fff1f; color: #000; }
 .team-yellow td { background-color: #FFF54C; color: #000; }
-.team-purple td { background-color: #A44CFF; color: #fff; }
-.team-orange td { background-color: #FF944C; color: #000; }
+.team-black td { background-color: #0e0e0e; color: #ffffff; }
+.team-white td { background-color: #ffffff; color: #000000; }
 
 
 /* Responsive móviles */
