@@ -437,3 +437,117 @@ footer {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* Tabla de sumatoria de pilotos */
+#sumatoria-pilotos {
+  margin: 20px auto;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#sumatoria-pilotos table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px; /* tamaño de fuente más pequeño para móvil */
+}
+
+#sumatoria-pilotos th,
+#sumatoria-pilotos td {
+  border: 1px solid #f0c000;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+#sumatoria-pilotos th {
+  background-color: #1c1c1c;
+  color: #f0c000;
+}
+
+#sumatoria-pilotos tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+@media (max-width: 480px) {
+  #sumatoria-pilotos table {
+    font-size: 12px; /* más pequeño para pantallas muy chicas */
+  }
+  #sumatoria-pilotos th,
+  #sumatoria-pilotos td {
+    padding: 4px 6px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor-boton {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  margin: 30px 0; /* espacio arriba y abajo */
+}
+
+.btn-rectangular {
+  background: #f0c000;
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-rectangular:hover {
+  background: #ffd633; /* un poco más claro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+
+
+
+/* Botón atrás */
+.btn-atras {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffd633;
+  color: #111;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-atras:hover {
+  background: #f0c000;
+  transform: scale(1.1);
+}
+
+
+
+
